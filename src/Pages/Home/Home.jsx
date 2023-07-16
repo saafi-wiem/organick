@@ -2,7 +2,7 @@ import React from "react";
 import bannerImg from "../../assets/icons/Banner.svg";
 import "./Home.css";
 function Home() {
-  //here you can declare the products array  => 7/
+  //here you can declare the products array => 7/
   return (
     <div className="home_page">
       <img className="banner_img" src={bannerImg} alt="" />
