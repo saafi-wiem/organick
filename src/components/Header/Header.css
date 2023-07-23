@@ -7,6 +7,7 @@
   /* padding: 0 160px; */
   justify-content: center;
 }
+
 header .menu {
   display: none;
 }
@@ -91,4 +92,7 @@ header .navigations a {
   header .menu {
     display: block;
   }
+}
+.active {
+  color: green !important;
 }
