@@ -1,0 +1,14 @@
+.cart_page {
+  padding: 150px;
+}
+.cart_products {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.card {
+  border: 1px solid #000;
+  border-radius: 12px;
+  padding: 20px;
+}
