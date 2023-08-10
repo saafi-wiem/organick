@@ -8,6 +8,7 @@ import store from "./store/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+<<<<<<< HEAD
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
@@ -15,4 +16,11 @@ root.render(
       </BrowserRouter>
     </Provider>
   </React.StrictMode>
+=======
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>
+>>>>>>> 02cd354099eada86423d93b9f2f587f38d03ab7a
 );

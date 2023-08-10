@@ -5,10 +5,10 @@ import bannerImg from "../../assets/icons/Banner.svg";
 import CardProduct from "../../components/CardProduct/CardProduct";
 import "./Home.css";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 function Home() {
   const [products, setProducts] = useState([]);
-
   const fetchData = async () => {
     try {
       await axios.get("https://dummyjson.com/products").then((res) => {
@@ -24,7 +24,6 @@ function Home() {
     fetchData();
   }, []);
 
-  console.log(products);
   return (
     <div className="home_page">
       <img className="banner_img" src={bannerImg} alt="" />
