@@ -1,14 +1,21 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ReactComponent as AddToCart } from "../../assets/icons/add-to-cart.svg";
+import { addToCart } from "../../store/cartSlice";
 import "./CardProduct.css";
+import { useDispatch } from "react-redux";
+import AddToCart from "../../assets/icons/add-to-cart.svg"
+
 const ProductCard = ({ product }) => {
   const navigate = useNavigate();
-
+  const dispatch = useDispatch()
   const handleNavigate = () => {
-    return navigate(`/products/${product?.id}`, {
+    navigate(`/products/${product?.id}`, {
       state: { product: product },
     });
+  };
+
+  const handleAddToCart = () => {
+    dispatch(addToCart(product)); 
   };
 
   return (
@@ -17,8 +24,14 @@ const ProductCard = ({ product }) => {
         <button className="product-card__btns--category-button">
           {product.category}
         </button>
-        <button className="product-card__btns--add-to-cart-button">
-          <AddToCart />
+        <button
+          className="product-card__btns--add-to-cart-button"
+          onClick={(event) => {
+            event.stopPropagation()
+            handleAddToCart()
+          }}
+        >
+          <img src={AddToCart} />
         </button>
       </div>
 

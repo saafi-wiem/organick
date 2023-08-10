@@ -1,0 +1,116 @@
+.card {
+    width: 300px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+.card.img {
+    width: 100px;
+    height: 200px;
+}
+.old-price {
+    text-decoration: line-through;
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    flex-basis: 200px;
+    background-color: #f9f8f8;
+    padding: 16px 30px;
+    flex-grow: 1;
+    max-width: 400px;
+    cursor: pointer;
+    min-width: 300px;
+  }
+  
+  .product-cardbtns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 50px;
+  }
+  
+  .product-cardbtns button {
+    border: none;
+  }
+  
+  .product-cardbtns--category-button {
+    height: 31px;
+    border-radius: 8px;
+    background: #274c5b;
+    padding: 5px 12px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  .product-cardbtns--add-to-cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: #274c5b;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .product-cardbtns--add-to-cart-button:hover {
+    animation: rotate-btn 0.2s linear 1;
+    -webkit-animation: rotate-btn 0.5s linear 1;
+  }
+  
+  @keyframes rotate-btn {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .product-cardimage {
+    width: 100%;
+    height: 324px;
+    object-fit: contain;
+  }
+  
+  .product-cardname {
+    color: #274c5b;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 12px;
+  }
+  
+  .product-cardfooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25px;
+    padding-top: 6px;
+    border-top: 1px solid #dedddd;
+  }
+  
+  .product-cardprice {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .product-cardoriginal-price {
+    color: #b8b8b8;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: line-through;
+  }
+  .product-card__discount-price {
+    color: #274c5b;
+    font-size: 18px;
+    font-weight: 700;
+  }
+ 
+  @media screen and (max-width: 600px) {
+    .product-card {
+      border-radius: 12px;
+    }
+  }
